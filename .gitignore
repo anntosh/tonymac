@@ -1,33 +1,27 @@
-# This file contains default .gitignore rules. To use it, copy it to .gitignore,
-# and it will cause files like your settings.php and user-uploaded files to be
-# excluded from Git version control. This is a common strategy to avoid
-# accidentally including private information in public repositories and patch
-# files.
-#
-# Because .gitignore can be specific to your site, this file has a different
-# name; updating Drupal core will not override your custom .gitignore file.
+#ignore all files in root directory.
+*.*
 
-# Ignore core when managing all of a project's dependencies with Composer
-# including Drupal core.
-# core
+# Exceptions
+!*.make
+!.gitignore
 
-# Core's dependencies are managed with Composer.
+# Uncomment following line if modifying .htaccess ?
+#!.htaccess
+
+# Ignore Drupal folders
+includes
+misc
+modules
 vendor
-
-# Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
-sites/*/services*.yml
-
-# Ignore paths that contain user-generated content.
+scripts
+core
+themes
+sites
+profiles/minimal
+profiles/standard
+profiles/testingIgnore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-
-# ignore sass files
-themes/bootsass/sass
-themes/bootsass/config.rb
-
-# ignore netbeans files
-nbproject
 
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
@@ -48,3 +42,4 @@ sites/simpletest
 # Ignore core phpcs.xml and phpunit.xml.
 core/phpcs.xml
 core/phpunit.xml
+~                      
